@@ -125,7 +125,7 @@ table {
 
 html,
 body {
-  background-color: #192562;
+  background-color: rgb(155, 0, 255);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -184,4 +184,22 @@ h1 {
   font-weight: 400;
   font-style: normal;
   font-size: 2rem;
+}
+a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  transition: all 0.3s ease; /* Transición suave */
+  background-color: transparent; /* Fondo transparente */
+}
+
+a:hover {
+  transform: scale(1.1); /* Efecto de zoom */
+  box-shadow: 0px 0px 15px 5px #ffffff; /* Brillo */
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo ligeramente iluminado */
 }

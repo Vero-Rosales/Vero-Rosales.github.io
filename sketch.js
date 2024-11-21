@@ -54,19 +54,36 @@ function drawCloud(x, y, size) {
 }
 
 function drawBird(x, y) {
-  fill(0); // Color negro para el pájaro
+  // Dibujar cuerpo del pájaro
+  fill(0); // Color negro para el cuerpo
   noStroke();
-
-  // Cuerpo del pájaro
-  ellipse(x, y, 20, 10); // Cuerpo ovalado
-
-  // Ala del pájaro
-  triangle(x - 5, y, x - 15, y - 10, x - 15, y + 10);
-
-  // Pico del pájaro
+  ellipse(x, y, 25, 15); // Cuerpo ovalado
+  
+  // Dibujar ala
+  fill(60); // Gris oscuro para el ala
+  triangle(x - 5, y, x - 20, y - 10, x - 20, y + 10); // Ala en forma de triángulo
+  
+  // Dibujar cola
+  fill(60); // Gris oscuro para la cola
+  triangle(x - 12, y + 5, x - 20, y + 2, x - 20, y + 8); // Cola puntiaguda
+  
+  // Dibujar pico
   fill(255, 204, 0); // Amarillo para el pico
-  triangle(x + 10, y, x + 15, y - 2, x + 15, y + 2);
+  triangle(x + 12, y, x + 18, y - 3, x + 18, y + 3); // Pico más definido
+  
+  // Dibujar ojo
+  fill(255); // Blanco para el ojo
+  ellipse(x + 5, y - 3, 4, 4); // Fondo del ojo
+  fill(0); // Pupila
+  ellipse(x + 5, y - 3, 2, 2); // Pupila
+  
+  // Dibujar patas (opcional, solo si queremos un pájaro más completo)
+  stroke(0); // Negro para las patas
+  strokeWeight(1.5);
+  line(x - 5, y + 8, x - 5, y + 12); // Pata izquierda
+  line(x - 3, y + 8, x - 3, y + 12); // Pata derecha
 }
+
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
